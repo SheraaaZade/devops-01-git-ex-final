@@ -42,6 +42,22 @@ app.get('/', function (req, res) {
 	 })
 });
 
+app.get('/about', function (req,res) {
+	res.render("./views/About", {
+		title: 'About us',
+		values: [
+			{
+				name:"Independant",
+				desc: "One of the characteristics of Agile Methodologies such as Scrum, Kanban or XP is the ability to move PBIs around, taking into account, amongst other criteria, their relative priority. When PBIs are tightly dependent, it might be possible to combine them into a single PBI. ",
+			},
+			{
+				name: "Negotiable",
+				desc: "According to Agile methodology, while the PBI lies in the product backlog it can be rewritten or even discarded, depending on business, market, technical or any other type of requirement by team members. ",
+			}
+		]
+	})
+});
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
